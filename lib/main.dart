@@ -3,6 +3,8 @@ void main(){
   print("my name is ${student1.name}");
   print("My height is ${student1.height}");
 
+  print("${student1.fun()}");
+
 
 }
 class Student{
@@ -10,6 +12,10 @@ class Student{
   int age;
   double height;
   Student({this.name,this.age,this.height});
+  
+  String fun(){
+    return" my name is $name. my age is $age";
+  }
 }
 
 //using void function
