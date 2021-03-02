@@ -1,18 +1,38 @@
-void main() {
-  var surname = "Thagunna";
-  var age = 22;
-  var height = 5.8;
-  final person1 = fun(sur:surname,age:age,height: height);
-  final person2 = fun(sur:'Bhandari',age:23,height:5.6);
-  print(person1);
-  print(person2);
-  arrowfun(name: 'Gaurav');
+void main(){
+  final student1 = Student(name: 'gaurav',age:22,height:5.8);
+  print("my name is ${student1.name}");
+  print("My height is ${student1.height}");
 
- 
-}
-
-String fun({String sur,int age, double height = 4.0}){
-  return "gaurav $sur. my height is $height feet, my age is $age years old.";
 
 }
-void arrowfun({String name}) => print("my name is $name");
+class Student{
+  String name;
+  int age;
+  double height;
+  Student({this.name,this.age,this.height});
+}
+
+//using void function
+/*
+
+void main(){
+ fun(name:'gauravv',age:23,height:5.4);
+ fun(name:'gauravvv',age:22,height:5.2); 
+
+}
+void fun({String name,int age, double height}){
+  print("my name is $name");
+
+}
+*/
+
+//Using return function
+/*void main(){
+final fun1 = fun(name: 'gaura',age:20,height:5.5);
+print(fun1);
+}
+String fun({String name, int age, double height}){
+  return("my name is $name. my age is $age, my height is $height");
+
+}
+*/
