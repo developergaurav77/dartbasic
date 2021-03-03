@@ -4,6 +4,7 @@ void main(){
   print("My height is ${student1.height}");
 
   print("${student1.fun()}");
+  print(student1);
 
 
 }
@@ -16,6 +17,11 @@ class Student{
   String fun(){
     return" my name is $name. my age is $age";
   }
+  @override
+    String toString() {
+      // TODO: implement toString
+      return "name:$name,age:$age,height:$height";
+    }
 }
 
 //using void function
