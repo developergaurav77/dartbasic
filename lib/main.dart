@@ -1,38 +1,19 @@
 void main(){
-  final values = [1,2,3,4];
-  print(" the sum of $values is ${sum(values)}");
+ fun(NetworkError.resourceNotAvailable);
 }
-int sum(List<int> values){
-  int i =0;
-  int results = 0;
- 
-  //another method
-  for( var val in values){
-    results = results + val;
+enum NetworkError{
+  badUrl,
+  timeOut,
+  resourceNotAvailable,
+}
+
+void fun(NetworkError error){
+  if(error == NetworkError.badUrl){
+    print('bad url');
+
+  }else if(error == NetworkError.timeOut){
+    print('time out');
+  }else if(error == NetworkError.resourceNotAvailable){
+    print('Resource Not Available');
   }
-  return results;
-
 }
-
-
-
-
-
-
-
-
-
-/*void main(){
-  final values = [1,2,3,4];
-  print(sum(values));
-}
-int sum(List<int> values){
-  int i =0;
-  int result=0;
-  while(i < values.length){
-    result = result + values[i];
-    i++;
-  }
-  return result;
-}
-*/
