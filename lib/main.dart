@@ -1,19 +1,13 @@
 void main(){
-   findNum(4);
-   findNum(5);
-   ternaryop(7);
-   ternaryop(8);
+  final values = [1,2,3,4];
+  print(sum(values));
 }
-void findNum(int num){
-  if(num % 2 ==0){
-    print("$num is even");
+int sum(List<int> values){
+  int i =0;
+  int result=0;
+  while(i < values.length){
+    result = result + values[i];
+    i++;
   }
-  else{
-    print("$num is odd");
-  }
-}
-void ternaryop(int val){
-  final type = val%2 == 0? 'even' : 'odd';
-  print("$val is $type");
-
+  return result;
 }
