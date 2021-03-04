@@ -1,11 +1,19 @@
 void main(){
-  var map = <String,dynamic>{
-    'name':'gaurav',
-    'age' : 22,
-    'height':5.6,
-    'surname': 'thagunna'
-  };
-  print(map['name']);
-  print("my name is ${map['name']} ${map['surname']}");
-  print("my height is ${map['height']}");
+   findNum(4);
+   findNum(5);
+   ternaryop(7);
+   ternaryop(8);
+}
+void findNum(int num){
+  if(num % 2 ==0){
+    print("$num is even");
+  }
+  else{
+    print("$num is odd");
+  }
+}
+void ternaryop(int val){
+  final type = val%2 == 0? 'even' : 'odd';
+  print("$val is $type");
+
 }
