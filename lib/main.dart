@@ -1,5 +1,5 @@
 void main(){
-  var map = {
+  var map = <String,dynamic>{
     'name':'gaurav',
     'age' : 22,
     'height':5.6,
