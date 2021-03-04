@@ -8,12 +8,18 @@ enum NetworkError{
 }
 
 void fun(NetworkError error){
-  if(error == NetworkError.badUrl){
+  switch(error){
+    case NetworkError.badUrl :
     print('bad url');
+    break;
+    case NetworkError.timeOut:
+     print('time out');
+     break;
+     case NetworkError.resourceNotAvailable:
+     print('Resource Not Available');
+      break;
 
-  }else if(error == NetworkError.timeOut){
-    print('time out');
-  }else if(error == NetworkError.resourceNotAvailable){
-    print('Resource Not Available');
+
   }
+ 
 }
