@@ -4,11 +4,13 @@ void main(){
 }
 int sum(List<int> values){
   int i =0;
-  int result= 0;
-  for(i=0;i<values.length;i++){
-    result = result + values[i];
+  int results = 0;
+ 
+  //another method
+  for( var val in values){
+    results = results + val;
   }
-  return result;
+  return results;
 
 }
 
